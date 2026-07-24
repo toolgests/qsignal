@@ -1,0 +1,12 @@
+fastapi>=0.115,<0.140
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+httpx[http2]>=0.27
+websockets>=12.0
+structlog>=24.1
+pandas>=2.2
+redis
+numpy>=1.26
+orjson>=3.10
+python-dotenv>=1.0

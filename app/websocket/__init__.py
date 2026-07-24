@@ -1,0 +1,3 @@
+"""
+Q Signals WebSocket Package
+"""
