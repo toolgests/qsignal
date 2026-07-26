@@ -300,7 +300,7 @@ class MarketStream:
             "Starting Finnhub Stream3534"
         )
 
-        logger.info("Starting Finnhub Stream34")
+        # logger.info("Starting Finnhub Stream34")
 
         symbols = FOREX_SYMBOLS + STOCK_SYMBOLS
 
