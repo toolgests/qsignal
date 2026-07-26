@@ -57,3 +57,12 @@ class BinanceClient:
 
 binance_client = BinanceClient()
 
+
+
+"""
+Coinbase WebSocket Client
+
+Production-ready asynchronous Coinbase Advanced Trade WebSocket client.
+"""
+
+# 

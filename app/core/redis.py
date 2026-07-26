@@ -16,3 +16,20 @@ print("HOST =", os.getenv("REDIS_HOST"))
 print("PORT =", os.getenv("REDIS_PORT"))
 print("TLS =", os.getenv("REDIS_TLS"))
 print("PASSWORD =", bool(os.getenv("REDIS_PASSWORD")))
+
+
+# import os
+# import redis.asyncio as redis
+# from dotenv import load_dotenv
+
+# load_dotenv()
+
+# redis_client = redis.Redis(
+#     host="localhost",
+#     port=6379,
+#     decode_responses=True,
+# )
+
+# print("HOST = localhost")
+# print("PORT = 6379")
+# print("SSL = False")

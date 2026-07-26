@@ -228,10 +228,11 @@ class MarketStream:
             ),
         ]
 
-        logger.info(
-            "Market Stream started.",
-            workers=len(self._tasks),
-        )
+        for task in self._tasks:
+            logger.info(
+                "BACKGROUND TASK STARTED",
+                task=task.get_name()
+            )
 
     async def stop(self) -> None:
         """
@@ -286,12 +287,20 @@ class MarketStream:
             )
 
     async def _finnhub_stream(self) -> None:
+        
         """
         Listen Finnhub Forex + Stock streams.
         Uses one WebSocket connection for all symbols.
+
         """
 
-        logger.info("Starting Finnhub Stream")
+        print("🔥 FINNHUB FUNCTION ENTERED")
+
+        logger.info(
+            "Starting Finnhub Stream3534"
+        )
+
+        logger.info("Starting Finnhub Stream34")
 
         symbols = FOREX_SYMBOLS + STOCK_SYMBOLS
 
@@ -302,12 +311,12 @@ class MarketStream:
 
         async for tick in finnhub_ws_client.stream(symbols):
 
-            # print("FINNHUB TICK:", tick)
+            print("FINNHUB TICK:", tick)
 
-            # logger.info(
-            #     "FINNHUB TICK RECEIVED",
-            #     tick=tick,
-            # )
+            logger.info(
+                "FINNHUB TICK RECEIVED",
+                tick=tick,
+            )
 
             if not self._running:
                 break

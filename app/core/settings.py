@@ -46,8 +46,11 @@ class Settings(BaseSettings):
     # ------------------------------------------------------------------
     # Binance
     # ------------------------------------------------------------------
+    # BINANCE_REST_URL: str = Field(
+    #     default="https://api.binance.com"
+    # )
     BINANCE_REST_URL: str = Field(
-        default="https://api.binance.com"
+        default="https://api.coinbase.com"
     )
 
     BINANCE_WS_URL: str = Field(

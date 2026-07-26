@@ -303,6 +303,13 @@ class TickProcessor:
         # WEBSOCKET PUSH
         # =========================
 
+#         logger.info(
+#     "SENDING WS DATA",
+#     symbol=symbol,
+#     market=market,
+#     price=float(price),
+# )
+
         await connection_manager.broadcast(
             {
                 "event": "price",

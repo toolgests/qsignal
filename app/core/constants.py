@@ -31,11 +31,8 @@ class MarketType(str, Enum):
 # =====================================================================
 
 CRYPTO_SYMBOLS = [
-    "BTCUSDT",
-    "ETHUSDT",
-    "BNBUSDT",
-    "SOLUSDT",
-    "XRPUSDT",
+    "BTC-USD",
+    "ETH-USD",
 ]
 
 FOREX_SYMBOLS = [

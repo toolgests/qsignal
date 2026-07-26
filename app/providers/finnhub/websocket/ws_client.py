@@ -510,6 +510,10 @@ class FinnhubWebSocketClient:
 
 
                     async for message in websocket:
+                        logger.info(
+        "FINNHUB RAW MESSAGE",
+        message=message,
+    )
 
 
                         payload = json.loads(message)
@@ -563,10 +567,10 @@ class FinnhubWebSocketClient:
                             }
 
 
-                            # print(
-                            #     "FINNHUB TICK:",
-                            #     tick
-                            # )
+                            print(
+                                "FINNHUB TICK:",
+                                tick
+                            )
 
 
                             yield tick
