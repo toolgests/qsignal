@@ -311,12 +311,12 @@ class MarketStream:
 
         async for tick in finnhub_ws_client.stream(symbols):
 
-            print("FINNHUB TICK:", tick)
+            # print("FINNHUB TICK:", tick)
 
-            logger.info(
-                "FINNHUB TICK RECEIVED",
-                tick=tick,
-            )
+            # logger.info(
+            #     "FINNHUB TICK RECEIVED",
+            #     tick=tick,
+            # )
 
             if not self._running:
                 break

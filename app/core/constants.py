@@ -31,27 +31,42 @@ class MarketType(str, Enum):
 # =====================================================================
 
 CRYPTO_SYMBOLS = [
-    "BTC-USD",
-    "ETH-USD",
+    "BTC-USD",   # Bitcoin
+    "ETH-USD",   # Ethereum
+    "SOL-USD",   # Solana
+    "XRP-USD",   # XRP
+    "BNB-USD",   # BNB
+    "DOGE-USD",  # Dogecoin
+    "ADA-USD",   # Cardano
+    "AVAX-USD",  # Avalanche
+    "LINK-USD",  # Chainlink
+    "DOT-USD",   # Polkadot
 ]
 
 FOREX_SYMBOLS = [
-    "OANDA:EUR_USD",
-    "OANDA:GBP_USD",
-    "OANDA:USD_JPY",
-    "OANDA:AUD_USD",
-    "OANDA:USD_CAD",
-    "OANDA:EUR_GBP",
+    "OANDA:EUR_USD",  # Euro / US Dollar
+    "OANDA:USD_JPY",  # US Dollar / Japanese Yen
+    "OANDA:GBP_USD",  # British Pound / US Dollar
+    "OANDA:AUD_USD",  # Australian Dollar / US Dollar
+    "OANDA:USD_CAD",  # US Dollar / Canadian Dollar
+    "OANDA:USD_CHF",  # US Dollar / Swiss Franc
+    "OANDA:NZD_USD",  # New Zealand Dollar / US Dollar
+    "OANDA:EUR_GBP",  # Euro / British Pound
+    "OANDA:EUR_JPY",  # Euro / Japanese Yen
+    "OANDA:GBP_JPY",  # British Pound / Japanese Yen
 ]
 
 STOCK_SYMBOLS = [
-    "AAPL",
-    "MSFT",
-    "NVDA",
-    "TSLA",
-    "META",
-    "GOOGL",
-    "AMZN",
+    "AAPL",   # Apple
+    "MSFT",   # Microsoft
+    "NVDA",   # NVIDIA
+    "AMZN",   # Amazon
+    "META",   # Meta Platforms
+    "GOOGL",  # Alphabet (Google)
+    "TSLA",   # Tesla
+    "AVGO",   # Broadcom
+    "NFLX",   # Netflix
+    "AMD",    # Advanced Micro Devices
 ]
 
 
