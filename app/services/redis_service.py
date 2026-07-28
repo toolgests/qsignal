@@ -172,8 +172,11 @@ class RedisService:
             "Looking for",
             key=key,
         )
+        exists = await redis_client.exists(key)
+        logger.info("Redis exists", exists=exists)
 
         data = await redis_client.get(key)
+        logger.info("Redis data", data=data)
 
         if not data:
             return None
