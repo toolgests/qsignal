@@ -3,6 +3,7 @@ Crypto API Router
 """
 
 from __future__ import annotations
+from app.core.redis import redis_client
 
 from fastapi import APIRouter, Query
 
@@ -18,6 +19,17 @@ router = APIRouter(
     prefix="/crypto",
     tags=["Crypto"],
 )
+
+
+@router.get("/redis-test")
+async def redis_test():
+    return {
+        "btc": await redis_client.get("tick:BTC-USD"),
+        "eth": await redis_client.get("tick:ETH-USD"),
+        "sol": await redis_client.get("tick:SOL-USD"),
+        "bnb": await redis_client.get("tick:BNB-USD"),
+    }
+
 
 
 @router.get("/{symbol}/price", response_model=CryptoPriceResponse)
@@ -50,3 +62,5 @@ async def get_candles(
     symbol = validate_crypto_symbol(symbol)
     interval = validate_timeframe(interval)
     return await crypto_service.get_candles(symbol, interval, limit)
+
+

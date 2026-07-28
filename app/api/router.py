@@ -16,6 +16,7 @@ from app.api.signals.router import router as signals_router
 from app.api.stocks.router import router as stocks_router
 from app.core.constants import API_PREFIX
 
+
 # ---------------------------------------------------------------------
 # Main API Router
 # ---------------------------------------------------------------------
@@ -31,3 +32,7 @@ api_router.include_router(stocks_router)
 api_router.include_router(indicators_router)
 api_router.include_router(signals_router)
 api_router.include_router(settings_router)
+
+
+
+
