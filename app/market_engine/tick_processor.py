@@ -311,16 +311,30 @@ class TickProcessor:
     price=float(price),
 )
 
-        await connection_manager.broadcast(
-            {
-                "event": "price",
-                "symbol": symbol,
-                "market": market.lower(),
-                "price": float(price),
-                "volume": float(volume),
-                "timestamp": timestamp.isoformat(),
-            }
-        )
+        # await connection_manager.broadcast(
+        #     {
+        #         "event": "price",
+        #         "symbol": symbol,
+        #         "market": market.lower(),
+        #         "price": float(price),
+        #         "volume": float(volume),
+        #         "timestamp": timestamp.isoformat(),
+        #     }
+        # )
+
+        await redis_client.publish(
+    "market_prices",
+    json.dumps(
+        {
+            "event": "price",
+            "symbol": symbol,
+            "market": market.lower(),
+            "price": float(price),
+            "volume": float(volume),
+            "timestamp": timestamp.isoformat(),
+        }
+    )
+)
 
 
         return tick
