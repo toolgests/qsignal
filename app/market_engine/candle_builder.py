@@ -288,7 +288,11 @@ class CandleBuilder:
             -1,
         )
 
-        await redis_client.expire(key, 86400)
+        await redis_client.expire(
+    redis_key,
+    86400,
+)
+
         return candle
 
 
