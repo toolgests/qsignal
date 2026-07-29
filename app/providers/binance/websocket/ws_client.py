@@ -1076,11 +1076,11 @@ class CoinbaseWebSocketClient:
                             message
                         )
 
-                        logger.info(
-                            "Coinbase RAW message",
-                            channel=payload.get("channel"),
-                            type=payload.get("type"),
-                        )
+                        # logger.info(
+                        #     "Coinbase RAW message",
+                        #     channel=payload.get("channel"),
+                        #     type=payload.get("type"),
+                        # )
 
                         if (
                             payload.get("channel")

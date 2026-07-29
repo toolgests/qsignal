@@ -263,15 +263,15 @@ class MarketStream:
 
         async for tick in binance_ws_client.stream(CRYPTO_SYMBOLS):
 
-            logger.info(
-            "CRYPTO TICK RECEIVED",
-            symbol=tick["symbol"],
-            price=tick["price"],
-        )
-            logger.info(
-            "BINANCE TICK RECEIVED",
-            tick=tick
-        )
+        #     logger.info(
+        #     "CRYPTO TICK RECEIVED",
+        #     symbol=tick["symbol"],
+        #     price=tick["price"],
+        # )
+        #     logger.info(
+        #     "BINANCE TICK RECEIVED",
+        #     tick=tick
+        # )
 
 
 
@@ -311,12 +311,12 @@ class MarketStream:
 
         async for tick in finnhub_ws_client.stream(symbols):
 
-            print("FINNHUB TICK:", tick)
+            # print("FINNHUB TICK:", tick)
 
-            logger.info(
-                "FINNHUB TICK RECEIVED",
-                tick=tick,
-            )
+            # logger.info(
+            #     "FINNHUB TICK RECEIVED",
+            #     tick=tick,
+            # )
 
             if not self._running:
                 break

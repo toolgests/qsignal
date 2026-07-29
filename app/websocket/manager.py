@@ -90,11 +90,11 @@ class ConnectionManager:
         message: dict,
     ) -> None:
 
-        logger.info(
-    "WS BROADCAST",
-    clients=len(self._connections),
-    message=message,
-)
+#         logger.info(
+#     "WS BROADCAST",
+#     clients=len(self._connections),
+#     message=message,
+# )
         """
         Broadcast message to all connected clients.
         """

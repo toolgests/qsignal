@@ -147,6 +147,7 @@ from __future__ import annotations
 
 import json
 from datetime import UTC, datetime
+from app.websocket.manager import connection_manager
 from decimal import Decimal
 from typing import Any
 
@@ -292,6 +293,20 @@ class CandleBuilder:
     redis_key,
     86400,
 )
+
+        await connection_manager.broadcast(
+            {
+                "event": "candle",
+                "symbol": candle["symbol"],
+                "timeframe": candle["timeframe"],
+                "timestamp": candle["timestamp"].isoformat(),
+                "open": float(candle["open"]),
+                "high": float(candle["high"]),
+                "low": float(candle["low"]),
+                "close": float(candle["close"]),
+                "volume": float(candle["volume"]),
+            }
+        )
 
         return candle
 

@@ -1159,10 +1159,10 @@ class FinnhubWebSocketClient:
                         payload = json.loads(message)
 
 
-                        logger.info(
-                            "Finnhub RAW message",
-                            type=payload.get("type"),
-                        )
+                        # logger.info(
+                        #     "Finnhub RAW message",
+                        #     type=payload.get("type"),
+                        # )
 
 
                         if payload.get("type") != "trade":
