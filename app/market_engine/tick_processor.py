@@ -227,7 +227,7 @@ class TickProcessor:
                     "timestamp": timestamp.isoformat(),
                 }
             ),
-            ex=86400,
+            ex=60,
         )
 
 
