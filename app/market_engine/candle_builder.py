@@ -285,13 +285,13 @@ class CandleBuilder:
         # keep only last 500 candles
         await redis_client.ltrim(
             redis_key,
-            -500,
+            -200,
             -1,
         )
 
         await redis_client.expire(
     redis_key,
-    86400,
+    3600,
 )
 
         await connection_manager.broadcast(
